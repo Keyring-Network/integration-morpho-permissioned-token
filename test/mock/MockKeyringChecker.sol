@@ -13,4 +13,4 @@ contract MockKeyringChecker is IKeyringChecker {
     function checkCredential(uint256 policyId, address account) external view returns (bool) {
         return credentials[policyId][account];
     }
-} 
+}

@@ -31,13 +31,7 @@ contract PermissionedERC20WrapperTest is Test {
         keyringChecker = new MockKeyringChecker();
         underlyingToken = new MockERC20();
         wrapper = new PermissionedERC20Wrapper(
-            "Wrapped Token",
-            "wTKN",
-            underlyingToken,
-            morpho,
-            bundler,
-            keyringChecker,
-            POLICY_ID
+            "Wrapped Token", "wTKN", underlyingToken, morpho, bundler, keyringChecker, POLICY_ID
         );
 
         // Setup initial state

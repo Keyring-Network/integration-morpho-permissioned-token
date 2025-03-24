@@ -1,16 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.22;
+
 import {IKeyringChecker} from "./interfaces/IKeyringChecker.sol";
 import {Ownable} from "@openzeppelin-contracts/access/Ownable.sol";
 import {ERC20PermissionedBase, IERC20} from "./base/ERC20PermissionedBase.sol";
 
 /// @title  PermissionedERC20Wrapper
-/// @notice Derived from the Centrifuge ERC20Wrapper contract (see https://github.com/centrifuge/morpho-market/blob/main/src/PermissionedERC20Wrapper.sol)
-/// @dev    Extension of the ERC-20 token contract to support token wrapping and transferring for permissioned addresses.
+/// @notice Derived from the Centrifuge ERC20Wrapper contract (see
+/// https://github.com/centrifuge/morpho-market/blob/main/src/PermissionedERC20Wrapper.sol)
+/// @dev    Extension of the ERC-20 token contract to support token wrapping and transferring for permissioned
+/// addresses.
 ///         Permissioned addresses are those with a credential from the keyring checker.
 /// @author Modified from OpenZeppelin Contracts v5.0.0 (token/ERC20/extensions/ERC20Wrapper.sol)
 contract PermissionedERC20Wrapper is ERC20PermissionedBase, Ownable {
-    
     /// @notice The keyring checker contract.
     IKeyringChecker public keyringChecker;
 
@@ -41,10 +43,10 @@ contract PermissionedERC20Wrapper is ERC20PermissionedBase, Ownable {
         setKeyringConfig(_keyringChecker, _keyringPolicyId);
     }
 
-
     /// @inheritdoc ERC20PermissionedBase
     function hasPermission(address account) public view override returns (bool attested) {
-        return account == address(0) || account == MORPHO || account == BUNDLER || (address(keyringChecker) == address(0) || keyringChecker.checkCredential(keyringPolicyId, account));
+        return account == address(0) || account == MORPHO || account == BUNDLER
+            || (address(keyringChecker) == address(0) || keyringChecker.checkCredential(keyringPolicyId, account));
     }
 
     /// @notice Sets the keyring config.
