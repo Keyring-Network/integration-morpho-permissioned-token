@@ -1,5 +1,7 @@
 # Keyring Morpho Market
 
+[![CI](https://github.com/Keyring-Network/integration-integration-morpho-permissioned-token/actions/workflows/foundry.yml/badge.svg)](https://github.com/Keyring-Network/integration-integration-morpho-permissioned-token/actions/workflows/foundry.yml)
+
 This repository implements permissioned Morpho vaults using Keyring Network, with a minimal footprint. It reuses the concept of permissioned tokens, similar to those used by Centrifuge for their RWA tokens.
 
 ## Key Benefits
