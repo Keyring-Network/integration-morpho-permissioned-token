@@ -28,3 +28,6 @@ src/external/
 
 # Soldeer
 /dependencies
+
+# MacOS
+.DS_Store 
