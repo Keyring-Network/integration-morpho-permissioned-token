@@ -2,13 +2,15 @@
 
 This repository implements permissioned Morpho vaults using Keyring Network, with a minimal footprint. It reuses the concept of permissioned tokens, similar to those used by Centrifuge for their RWA tokens.
 
-## Key Benefits
+## Key benefits of this approach
 
 - Zero modifications required to the Metamorpho vault codebase
 - Based on audited, deployed, and production-tested smart contracts developed by Centrifuge
 - Simple and efficient implementation
 
-For reference, see the [Centrifuge repository](https://github.com/centrifuge/morpho-market/).
+## Concerns of this approach
+
+- Need to deal with a wrapping token, adding UX blockers
 
 ## Development
 
