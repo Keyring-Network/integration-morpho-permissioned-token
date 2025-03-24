@@ -1,17 +1,18 @@
 # Keyring Morpho Market
 
-To have permissioned Morpho vaults using Keyring Network, while having a minimal footprint, this repository re-use the concept of permissioned token, used by Centrifuge for their RWA tokens.
+This repository implements permissioned Morpho vaults using Keyring Network, with a minimal footprint. It reuses the concept of permissioned tokens, similar to those used by Centrifuge for their RWA tokens.
 
-Advantages of this approach:
+## Key Benefits
 
-- Null footprint on the Metamorpho vault codebase
-- Inspiration from audited, deployed and used smart contract, developped by Centrifuge
+- Zero modifications required to the Metamorpho vault codebase
+- Based on audited, deployed, and production-tested smart contracts developed by Centrifuge
+- Simple and efficient implementation
 
-see [Centrifuge repository](https://github.com/centrifuge/morpho-market/)
+For reference, see the [Centrifuge repository](https://github.com/centrifuge/morpho-market/).
 
-## Developing
+## Development
 
-#### Getting started
+### Getting Started
 
 ```sh
 git clone git@github.com:Keyring-Network/integration-integration-morpho-permissioned-token.git
@@ -19,8 +20,18 @@ cd integration-morpho-permissioned-token
 forge soldeer install
 ```
 
-#### Testing
+### Testing
+
+Run the test suite:
 
 ```sh
 forge test
+```
+
+### Code Coverage
+
+Generate a coverage report:
+
+```sh
+forge coverage
 ```
